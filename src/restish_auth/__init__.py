@@ -3,7 +3,7 @@ import json
 import subprocess
 from pathlib import Path
 
-from platformdirs import user_config_dir
+from platformdirs import user_cache_dir, user_config_dir
 
 from requests.auth import AuthBase
 
@@ -16,8 +16,8 @@ class RestishAuth(AuthBase):
     @property
     def auth_header(self):
         if not self._auth_header:
-            restish_path = user_config_dir("restish")
-            with open(restish_path / "apis.json", "r") as f:
+            restish_config_path = Path(user_config_dir("restish"))
+            with open(restish_config_path / "apis.json", "r") as f:
                 apis = json.load(f)
 
             if self.section not in apis:
@@ -26,7 +26,8 @@ class RestishAuth(AuthBase):
                 )
 
             def read_cache():
-                with open(restish_path / "cache.json", "r") as f:
+                restish_cache_path = Path(user_cache_dir("restish"))
+                with open(restish_cache_path / "cache.json", "r") as f:
                     cache = json.load(f)
                 return cache
 
