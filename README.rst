@@ -28,7 +28,7 @@ Usage
 Changelog
 ---------
 
-* 0.3 (2023-09-04): Compatibility with Restish 0.18's new config location. For
+* 0.3 (2023-09-05): Compatibility with Restish 0.18's new config location. For
   older versions of restish, use previous versions of
   ``requests-restish-auth``.
 
