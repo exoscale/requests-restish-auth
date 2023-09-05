@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "requests-restish-auth"
-version = "0.2"
+version = "0.3"
 authors = [
   { name="Exoscale", email="support@exoscale.com" },
 ]
