@@ -17,6 +17,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    "platformdirs",
+]
 
 [project.urls]
 "Homepage" = "https://github.com/exoscale/requests-restish-auth"

@@ -24,3 +24,14 @@ Usage
 
     auth = RestishAuth("my-restish-api-name")
     response = requests.get("https://my-api-endpoint.com/", auth=auth)
+
+Changelog
+---------
+
+* 0.3 (2023-09-05): Compatibility with Restish 0.18's new config location. For
+  older versions of restish, use previous versions of
+  ``requests-restish-auth``.
+
+* 0.2 (2022-09-16): Load token lazily.
+
+* 0.1 (2022-09-14): Initial version.
